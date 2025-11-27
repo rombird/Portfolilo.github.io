@@ -27,7 +27,7 @@ body,
 noscript {
     background-color: var(--color-dark-mode)
 }
-
+/* var(--color-dark-mode) */
 .main,
 body {
     overflow-x: hidden
@@ -435,7 +435,7 @@ noscript {
     position: absolute;
     font-size: 2.5rem;
     font-weight: 300;
-    background-color: #20222e;
+    background-color: #000;
     padding: 5px 10px;
     border-radius: 20px;
     left: 120px;
@@ -509,18 +509,18 @@ noscript {
     background-color: #fff
 }
 
-.left-eye {
+/* .left-eye {
     box-shadow: -1px -2px 2px rgba(0, 0, 0, .589) inset
 }
 
 .right-eye {
     box-shadow: 1px 3px 2px rgba(0, 0, 0, .589) inset
-}
+} */
 
 .pupil {
     width: 3.5px;
     height: 3.5px;
-    background: #241010
+    background: #241010;
 }
 
 .logo:hover {
