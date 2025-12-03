@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Orbit";
+    src: url('/src/font/Orbit-Regular.ttf') ;
+}
+@font-face {
+    font-family: "Hahmlet-Bold";
+    src: url('/src/font/Hahmlet-Bold.ttf');
+}
+@font-face {
+    font-family: "Hahmlet-Black";
+    src: url('/src/font/Hahmlet-Black.ttf');
+}
+
 #labelforsetting,
 #labelforvisualmode,
 #switchforvisualmode:checked+#labelforvisualmode {
@@ -94,15 +107,16 @@ html {
     --color-ddd-color: #ddd;
     --color-gray: #c4c4c4;
     --color-purple: #8C8C8C ; /*수정 #F26D3D */
-    --color-light-purple: #404040; /*수정*/
+    --color-light-purple: #C48169; /*수정*/
     --color-light-blue: #D9D9D9 ; /*수정*/
     --color-navbarBorder-dark: #e2e2e207;
     --color-shadowDark: rgba(0, 0, 0, 0.137);
     --static-heading-gradient-blue: #b0f3f1;
     --static-heading-gradient-pink: #ffcfdf;
     --tech-stack-box-first-color: #262626;
-    --tech-stack-box-second-color: #404040;
+    --tech-stack-box-second-color: #140601;
     --tech-stack-box-border-color: #e2e2e207;
+    --footer-color:#262626;
 }
 
 #hello-friend,
@@ -177,17 +191,18 @@ html {
 }
 /* 라이트모드가 활성화 될 때 해당 변수들을 재정의 */
 .light-mode {
-    --color-dark-mode: #ece7e1;
+    --color-dark-mode: #FEF5F1;
     --color-black: #fff;
     --color-white: #000;
     --color-ddd-color: rgb(31, 31, 31);
-    --color-navbarBorder-dark: #d1d6eb;
+    --color-navbarBorder-dark: #FACBB9;
     --static-heading-gradient-blue: #0f7878;
     --static-heading-gradient-pink: #f09bb9;
     --color-shadowDark: #e2ddd7;
-    --tech-stack-box-first-color: #e7e2db;
-    --tech-stack-box-second-color: #ece7e100;
-    --tech-stack-box-border-color: #dad5cf
+    --tech-stack-box-first-color: #FEF5F1;
+    --tech-stack-box-second-color: #FCE0D5;
+    --tech-stack-box-border-color: #FEF5F1;
+    --footer-color:#FEF5F1;
 }
 
 .setting-container {
@@ -790,7 +805,8 @@ noscript {
     width: 75%;
     padding-top: 30px;
     color: var(--color-ddd-color);
-    line-height: 20px
+    line-height: 20px;
+    font-family: "Orbit" !important;
 }
 
 .contact-btn-div {
@@ -1197,7 +1213,7 @@ footer {
 }
 
 .faviconforProject {
-    width: 30px;
+    width: 45px;
     border-radius: 50%
 }
 
@@ -1341,7 +1357,7 @@ footer {
 .footer-background {
     width: 100%;
     height: 100vh;
-    background-color: #0b0b0b;
+    background-color: var(--footer-color);
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -1415,7 +1431,7 @@ footer {
     border-radius: 50%;
     border: 2px solid #e2dede;
     position: relative;
-    box-shadow: 0 0 0 #8000ff inset;
+    box-shadow: 0 0 0 #F26D3D inset;
     transition-duration: .3s
 }
 
@@ -1454,7 +1470,7 @@ footer {
 }
 
 .social-media-container a:hover {
-    box-shadow: 0 0 50px 100px #8000ff inset;
+    box-shadow: 0 0 50px 100px #F26D3D inset;
     transition-duration: 1s;
     border: none
 }
@@ -1506,7 +1522,7 @@ footer {
 .footer-avatar-eye {
     width: 50px;
     height: 50px;
-    background-color: #dfd2d2;
+    background-color: var(--footer-background-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1546,7 +1562,7 @@ footer {
 }
 
 .footer-bottom {
-    background-color: #0b0b0b;
+    background-color: var(--footer-color);
     width: 100%;
     display: flex;
     align-items: center;
