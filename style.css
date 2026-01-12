@@ -2,13 +2,12 @@
     font-family: "Orbit";
     src: url('/src/font/Orbit-Regular.ttf') ;
 }
-@font-face {
-    font-family: "Hahmlet-Bold";
-    src: url('/src/font/Hahmlet-Bold.ttf');
-}
-@font-face {
-    font-family: "Hahmlet-Black";
-    src: url('/src/font/Hahmlet-Black.ttf');
+
+.hahmlet {
+  font-family: "Hahmlet", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #labelforsetting,
