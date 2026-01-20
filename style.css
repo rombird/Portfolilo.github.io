@@ -799,7 +799,8 @@ noscript {
     width: 75%;
     padding-top: 30px;
     color: var(--color-ddd-color);
-    line-height: 19.2px;
+    max-width: 800px;
+    line-height: 1.6;
     font-size:20px;
 }
 

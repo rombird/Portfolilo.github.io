@@ -638,11 +638,18 @@ noscript{
     align-items: flex-start;
     color: var(--color-white);
     flex-wrap: wrap;
-    
+    flex-direction: column; /* 위아래로 쌓이게 설정 */
+    gap: 20px; /* 메인 문구와 서브 문구 사이의 간격 */
 }
+
 #work div{
     display: flex;
 	margin: 0px 12px 0px 0px;
+}
+#name-sub{
+    font-size: 1.5rem !important; /* 글자 크기 (기존 스타일 무시를 위해 !important 추가) */
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 .jello:hover{
     background-clip: text;
@@ -716,11 +723,11 @@ noscript{
   
 #info-para{
     width: 75%;
-    font-size: 2rem;
+    font-size: 5rem !important; 
     font-weight: 400;
     padding-top: 30px;
     color: var(--color-ddd-color);
-    line-height: 20px;
+    line-height: 1.7;
 }
 .contact-btn-div{
     width: 100%;
