@@ -5,18 +5,7 @@
   font-style: normal;
 }
 
-#labelforsetting,
-#labelforvisualmode,
-#switchforvisualmode:checked+#labelforvisualmode {
-    background-repeat: no-repeat;
-    background-position: center
-}
 
-#labelforsetting,
-#labelforsound {
-    height: 40px;
-    background-size: 60%
-}
 
 #preloader,
 .invertapplied,
@@ -30,11 +19,12 @@ noscript {
     height: 100%
 }
 
+/* 배경색 화이트로 고정 */
 body,
 noscript {
-    background-color: var(--color-dark-mode)
+    background-color: #fff
 }
-/* var(--color-dark-mode) */
+
 .main,
 body {
     overflow-x: hidden
@@ -63,7 +53,7 @@ footer {
 
 #GmailLogo,
 .sign svg path {
-    fill: white
+    fill: #b3b3b3;
 }
 
 * {
@@ -94,23 +84,18 @@ html {
 /* 기본 다크모드 색상 정의 */
 :root {
     cursor: default;
-    --color-white: #fff;
-    --color-black: #000;
-    --color-dark-mode: #262626; /*수정*/
-    --color-light-mode: #ece7e1;
-    --color-ddd-color: #ddd;
-    --color-gray: #c4c4c4;
-    --color-purple: #8C8C8C ; /*수정 #F26D3D */
-    --color-light-purple: #C48169; /*수정*/
-    --color-light-blue: #D9D9D9 ; /*수정*/
-    --color-navbarBorder-dark: #e2e2e207;
-    --color-shadowDark: rgba(0, 0, 0, 0.137);
-    --static-heading-gradient-blue: #b0f3f1;
-    --static-heading-gradient-pink: #ffcfdf;
-    --tech-stack-box-first-color: #262626;
-    --tech-stack-box-second-color: #140601;
-    --tech-stack-box-border-color: #e2e2e207;
-    --footer-color:#262626;
+    --color-dark-mode: #ffffff;
+    --color-black: #fff;
+    --color-white: #000;
+    --color-ddd-color: rgb(31, 31, 31);
+    /* 메인 컬러 : #dc977b */
+    --static-heading-gradient-blue: #0f7878;
+    --static-heading-gradient-pink: #f09bb9;
+    --color-shadowDark: #e2ddd7;
+    --tech-stack-box-first-color: #FEF5F1;
+    --tech-stack-box-second-color: #FCE0D5;
+    --tech-stack-box-border-color: #FEF5F1;
+    --footer-color:#dc977b;
 }
 
 #hello-friend,
@@ -127,11 +112,11 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0a0a10
+    background: #fff
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #F26D3D
+    background-color: #dc977b
 }
 
 .cursor-inner {
@@ -178,26 +163,12 @@ html {
 
 .activeThistab:before,
 .navbar-tabs-ul li:hover:before {
-    background-color: var(--color-white);
+    background-color: #b3b3b3;
     height: 10px;
     width: 10px;
     left: -20px
 }
-/* 라이트모드가 활성화 될 때 해당 변수들을 재정의 */
-.light-mode {
-    --color-dark-mode: #FEF5F1;
-    --color-black: #fff;
-    --color-white: #000;
-    --color-ddd-color: rgb(31, 31, 31);
-    --color-navbarBorder-dark: #FACBB9;
-    --static-heading-gradient-blue: #0f7878;
-    --static-heading-gradient-pink: #f09bb9;
-    --color-shadowDark: #e2ddd7;
-    --tech-stack-box-first-color: #FEF5F1;
-    --tech-stack-box-second-color: #FCE0D5;
-    --tech-stack-box-border-color: #FEF5F1;
-    --footer-color:#FEF5F1;
-}
+
 
 .setting-container {
     width: 60px;
@@ -209,78 +180,20 @@ html {
     padding: 20px 0
 }
 
-#labelforsetting {
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    background-image: url(src/svg/settings-svgrepo-com.svg);
-    transition-duration: .5s;
-    cursor: pointer
-}
-
-.soundtogglebuttoncontainer,
-.visualmodetogglebuttoncontainer {
-    align-items: center;
-    width: fit-content;
-    transition-duration: .3s
-}
-
 .settingactivate {
     width: 200px
 }
 
-.visualmodetogglebuttoncontainer {
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    transform: translate(-50px) scale(0)
-}
-
-.visualmodeshow {
-    transition-duration: .3s;
-    transform: translate(0) scale(1)
-}
-
-#switchforsetting,
-#switchforsound,
-#switchforvisualmode,
 .hamburger,
 .mobiletogglemenu {
     display: none
 }
 
-#switchforsetting:checked+#labelforsetting {
+/* #switchforsetting:checked+#labelforsetting {
     transform: rotate(180deg);
     transition-duration: .5s
-}
+} */
 
-#labelforvisualmode {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background-image: url(src/png/crescent-moon\ \(1\).png);
-    background-size: 50%;
-    transition-duration: .5s;
-    cursor: pointer
-}
-
-#switchforvisualmode:checked+#labelforvisualmode {
-    transform: rotate(360deg);
-    transition-duration: .5s;
-    background-image: url(src/png/sun.png);
-    background-size: 60%
-}
-
-.soundtogglebuttoncontainer {
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    transform: translate(-130px) scale(0)
-}
-
-#labelforsound,
 #preloader {
     display: flex;
     align-items: center;
@@ -288,33 +201,10 @@ html {
     background-position: center
 }
 
-.soundmodeshow {
-    transition-delay: .1s;
-    transition-duration: .5s;
-    display: inline-block;
-    transform: translate(0) scale(1)
-}
 
 .logo,
 .logo:hover {
     transition-duration: 1s
-}
-
-#labelforsound {
-    position: relative;
-    justify-content: center;
-    width: 40px;
-    background-image: url(src/svg/Mute_Icon.svg);
-    cursor: pointer;
-    transition-duration: .5s
-}
-
-#switchforsound:checked+#labelforsound {
-    transition-duration: .5s;
-    background-image: url(src/svg/Speaker_Icon.svg);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center
 }
 
 header {
@@ -342,9 +232,8 @@ noscript {
     position: fixed
 }
 
-#name,
 .getintouch-heading article {
-    background: -webkit-linear-gradient(135deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+    /* background: -webkit-linear-gradient(135deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple)); */
     -webkit-text-fill-color: transparent
 }
 
@@ -362,14 +251,14 @@ noscript {
 }
 
 .navbar {
-    background-image: linear-gradient(to bottom right, var(--tech-stack-box-first-color), var(--tech-stack-box-second-color));
+    background-color: #ffffff;
     backdrop-filter: blur(10px);
     height: 80px;
     width: 80%;
     padding: 0 20px;
     justify-content: space-between;
     z-index: 999;
-    border: 1px solid var(--color-navbarBorder-dark);
+    border: 1px solid #dc977b;
     border-radius: 50px
 }
 
@@ -673,7 +562,7 @@ noscript {
     }
 }
 
-#name {
+/* #name {
     align-items: flex-start;
     background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
     background-clip: text;
@@ -681,7 +570,7 @@ noscript {
     background-size: 400% 400%;
     -webkit-animation: 3s infinite gradient;
     animation: 3s infinite gradient
-}
+} */
 
 @keyframes gradient {
 
@@ -711,11 +600,12 @@ noscript {
     margin: 0 12px 0 0
 }
 
+/* 메인 영어 소개 글 hover 시 색상 변경 */
 .jello:hover {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-color: #F26D3D;
+    background-color: #dc977b;
     -webkit-animation: .9s both jello-vertical;
     animation: .9s both jello-vertical
 }
@@ -848,12 +738,12 @@ noscript {
     transition-duration: .3s;
     display: flex
 }
-
+/* #f4f39b */
 .letsTalkBtn-BG {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(150deg, #F2913D, #F26D3D);
+    background-image: linear-gradient(150deg, #dc977b );
     z-index: -1;
     left: 6px;
     top: 6px;
@@ -1102,7 +992,8 @@ noscript {
 
 .project-box,
 .tech-stack-box {
-    background-image: linear-gradient(to bottom right, var(--tech-stack-box-first-color), var(--tech-stack-box-second-color))
+    border:#000;
+    background-image: linear-gradient(to bottom right, #FEF5F1, var(--tech-stack-box-second-color))
 }
 
 .tech-stack-wrapper {
@@ -1261,7 +1152,7 @@ footer {
 }
 
 .github-redirect:hover svg {
-    fill: #F26D3D;
+    fill: #dc977b;
     opacity: 1;
 }
 
@@ -1282,17 +1173,17 @@ footer {
     left: 0;
     display: block;
     border-radius: 50px;
-    background: #F26D3D;
+    background: #dc977b;
     width: 45px;
     height: 45px;
     transition: .3s
 }
 
 .cta span {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 500;
     letter-spacing: .05em;
-    color: var(--color-light-blue)
+    color: #0a0a10;
 }
 
 .cta svg {
@@ -1354,7 +1245,7 @@ footer {
 .footer-background {
     width: 100%;
     height: 100vh;
-    background-color: var(--footer-color);
+    /* background-color: var(--footer-color); */
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -1428,7 +1319,7 @@ footer {
     border-radius: 50%;
     border: 2px solid #e2dede;
     position: relative;
-    box-shadow: 0 0 0 #F26D3D inset;
+    box-shadow: 0 0 0 #dc977b inset;
     transition-duration: .3s
 }
 
@@ -1439,7 +1330,7 @@ footer {
 
 .getintouch-heading article {
     font-size: 2rem;
-    background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+    background: #dc977b;
     background-clip: text;
     -webkit-background-clip: text;
     font-weight: 700
@@ -1448,7 +1339,7 @@ footer {
 .fa-copyright,
 .footer-bottom article {
     font-size: 1.5rem;
-    color: #b0b0b0
+    color: #0a0a10;
 }
 
 .logos {
@@ -1458,7 +1349,7 @@ footer {
 }
 
 .SocialHandle {
-    fill: white;
+    fill: #b3b3b3;
     width: 60%
 }
 
@@ -1467,7 +1358,7 @@ footer {
 }
 
 .social-media-container a:hover {
-    box-shadow: 0 0 50px 100px #F26D3D inset;
+    box-shadow: 0 0 50px 100px #dc977b inset;
     transition-duration: 1s;
     border: none
 }
@@ -1742,7 +1633,7 @@ footer {
     }
 
     .mobile-navbar-tabs-ul {
-        background-color: var(--color-dark-mode);
+        background-color: var(--color-dark-mode); 
         width: 100%;
         height: 100%;
         display: flex;
