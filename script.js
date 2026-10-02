@@ -39,7 +39,7 @@ projects.forEach(p => {
   const first = `<div class="slide">
     <div class="d-top"><div><div class="d-head">${p.logo ? `<img class="logo" src="${p.logo}" alt="">` : ''}<h3 class="d-title">${p.title}</h3></div><p class="d-sum">${p.summary}</p>
       <dl class="meta"><dt>기간</dt><dd>${p.period}</dd><dt>역할</dt><dd>${p.role}</dd><dt>기술</dt><dd>${p.stack}</dd></dl>
-      <p class="links">${(p.links || []).map(([nm, u]) => `<a href="${u}" target="_blank" rel="noopener">${nm}</a>`).join('')}</p></div>
+      <p class="links">${(p.links || []).map(([nm, u, ic]) => `<a href="${u}" target="_blank" rel="noopener" aria-label="${nm}" title="${nm}">${ic ? `<img src="${ic}" alt="">` : nm}</a>`).join('')}</p></div>
       <div class="shot">${p.img ? `<img src="${p.img}" alt="${p.title}">` : '스크린샷 자리'}</div></div>
     <div class="d-body">${(p.sections || S).map(([h, t]) => `<div><h4>${h}</h4><p>${t}</p></div>`).join('')}</div>
     ${pg(1)}</div>`;

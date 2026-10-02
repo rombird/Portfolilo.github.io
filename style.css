@@ -19,7 +19,7 @@
   --line: #2b2b2b;
   --frame: #6e0a0a;
   --blue: #a9cde2;
-  --serif: 'portfolio', 'Times New Roman', serif;
+  --serif: 'portfolio', 'Pretendard', 'Times New Roman', serif;
   /* 영문 제목용 */
   --sans: 'Pretendard', -apple-system, 'Malgun Gothic', sans-serif;
   /* 본문용 */
@@ -558,16 +558,9 @@ nav a.on {
   line-height: 1.7
 }
 
-.links {
-  margin-top: 2cqw;
-  font-size: 1cqw;
-  display: flex;
-  gap: 2cqw
-}
-
-.links a {
-  color: var(--ink)
-}
+.links{ display:flex; align-items:center; gap:1.2cqw; }
+.links a img{ width:2.2cqw; height:2.2cqw; display:block; transition:opacity .2s; }
+.links a:hover img{ opacity:.6; }
 
 /* 슬라이드 진입 효과: 시작 시 한 번만, 커버 제목만 */
 .title {
