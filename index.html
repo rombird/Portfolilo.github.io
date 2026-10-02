@@ -1,565 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#000" />
-  <meta name="description"
-    content="SaeRom | Portfolio, Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
-  <meta name="keywords"
-    content="Sae Rom,rombird portfolio" />
-  <meta name="author" content="rombird" />
-  <meta property="og:image" content="" />
-  <meta property="og:title" content="rombird | Portfolio" />
-  <meta property="og:description"
-    content="" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio 2025-2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <meta property="og:url" content="" />
-  <meta property="og:site_name" content="rombird Portfolio" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="" />
-  <meta name="twitter:title" content="Rombird | Portfolio" />
-  <meta name="twitter:description"
-  content="Hi! My name is Vinod" />
-  <meta name="twitter:image" content="" />
-  <title>Rombird | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="src/png/logo.png" />
-  <!-- aos cdn -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- google fonts-->
+  <!-- 한글 본문: Pretendard -->
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps&family=Hahmlet:wght@100..900" />
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 
-<body class="body">
-  <div id="preloader"></div>
-  <noscript>Allow Javascript</noscript>
+  <link rel="stylesheet" href="style.css">
 
-  <header>
-    <!-- <div class="cursor-inner" id="cursor-inner"></div>
-    <div class="cursor-outer" id="cursor-outer"></div> -->
+</head>
 
-    <div class="navbar" id="navbar">
-      <!-- <div class="hey">Hey!</div> -->
-      <div class="logo" tabindex="0">
-        <div class="logo-top">
-          <img src="src/png/logo.png" alt="animation-head" id="nav-avatar"/>
-        </div>
-      </div>
-      <div class="navbar-tabs" id="navbar-tabs">
-        <ul class="navbar-tabs-ul">
-          <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
-            <a href="#home" tabindex="0" aria-label="Home menu button">
-              &#60;/Home&#62;
-            </a>
-          </li>
+<body>
 
-          <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
-            <a href="#about" aria-label="about menu button">
-              &#60;/AboutMe&#62;
-            </a>
-          </li>
+  <nav aria-label="목차">
+    <a href="#home" class="on">&lt;/Home&gt;</a>
+    <a href="#about">&lt;/AboutMe&gt;</a>
+    <a href="#projects">&lt;/Projects&gt;</a>
+    <!-- <a href="#skills">&lt;/Skills&gt;</a> -->
+  </nav>
 
-          <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
-            <a href="#projects" aria-label="projects menu button">
-              &#60;/Projects&#62;
-            </a>
-          </li>
-
-          <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
-            <a href="#skills" aria-label="skills menu button">
-              &#60;/Skills&#62;
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- navbar tabs ends -->
-    </div>
-  </header>
-  <!-- header ends here -->
-
-  <main>
-    <!-- hamburger -->
-    <!-- <div class="hamburger" id="hamburger" data-aos="fade">
-      <div class="hamburgerbase">
-        <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
-          <span class="burger-bar" id="burger-bar1"></span>
-          <span class="burger-bar" id="burger-bar2"></span>
-          <span class="burger-bar" id="burger-bar3"></span>
-        </button>
-      </div>
-    </div> -->
-    <!-- hamburger -->
-    <div class="mobiletogglemenu" id="mobiletogglemenu">
-      <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
-        <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
-          <a href="#home" tabindex="0" aria-label="Home menu button">
-            &#60;/Home&#62;
-          </a>
-        </li>
-
-        <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
-          <a href="#about" tabindex="0" aria-label="about menu button">
-            &#60;/AboutMe&#62;
-          </a>
-        </li>
-        <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
-          <a href="#skills" tabindex="0" aria-label="skills menu button">
-            &#60;/Skills&#62;
-          </a>
-        </li>
-        <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
-          <a href="#projects" tabindex="0" aria-label="projects menu button">
-            &#60;/Projects&#62;
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- mobile toggle menu ends -->
-
-    <section class="landing-page-container" id="home">
-      <div class="blob"></div>
-      <div class="text-content">
-        <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
-          <p class="jello">R</p>
-          <p class="jello">o</p>
-          <p class="jello">m</p>
-          <p class="jello">b</p>
-          <p class="jello">i</p>
-          <p class="jello">r</p>
-          <p class="jello">d</p>
-          <p class="jello">(</p>
-          <p class="jello">)</p>
-          <p class="jello">;</p>
-          &nbsp;
-          <p class="jello">I</p>
-          <p class="jello">'</p>
-          <p class="jello">m</p>
-        </article>
-        <article id="name" data-aos="fade-up" data-aos-delay="200">
-          <p class="jello">S</p>
-          <p class="jello">a</p>
-          <p class="jello">e</p>
-          <p class="jello">R</p>
-          <p class="jello">o</p>
-          <p class="jello">m</p>
-          &nbsp;
-        </article>
-        <article id="work" data-aos="fade-up" data-aos-delay="400">
-          <div>
-            <p class="jello">"I</p>
-          </div>
-          <div>
-            <p class="jello">f</p>
-            <p class="jello">i</p>
-            <p class="jello">n</p>
-            <p class="jello">d</p>
-          </div>
-          <div>
-            <p class="jello">i</p>
-            <p class="jello">n</p>
-            <p class="jello">s</p>
-            <p class="jello">i</p>
-            <p class="jello">g</p>
-            <p class="jello">h</p>
-            <p class="jello">t</p>
-            <p class="jello">s</p>
-          </div>
-          <div>
-            <p class="jello">&</p>
-          </div>
-        </article>
-        <article id="work" data-aos="fade-up" data-aos-delay="400">
-          <div>
-            <p class="jello">b</p>
-            <p class="jello">u</p>
-            <p class="jello">i</p>
-            <p class="jello">l</p>
-            <p class="jello">d</p>
-          </div>
-          <div>
-            <p class="jello">w</p>
-            <p class="jello">e</p>
-            <p class="jello">b</p>
-          </div>
-          <div>
-            <p class="jello">e</p>
-            <p class="jello">x</p>
-            <p class="jello">p</p>
-            <p class="jello">e</p>
-            <p class="jello">r</p>
-            <p class="jello">i</p>
-            <p class="jello">e</p>
-            <p class="jello">n</p>
-            <p class="jello">c</p>
-            <p class="jello">e</p>
-            <p class="jello">s</p>
-            <p class="jello">."</p>
-          </div>
-        </article>
-        <p id="info-para" data-aos="fade-up" data-aos-delay="600" class="hahmlet" >
-          안녕하세요. rombird's PortFolio사이트에 오신 걸 환영합니다. <br />
-           임새롬 입니다. <br />
-        </p> 
-        <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
-          <a href="mailto:romsae5510@gmail.com" tabindex="-1">
-            <button class="letsTalkBtn">
-              <p class="letsTalkBtn-text">Let's Talk!</p>
-              <span class="letsTalkBtn-BG"></span>
-            </button>
-          </a>
-          
-        </div>
-      </div>
-    </section>
-    <!-- landing page ends here -->
-    <section class="about-section-container" id="about" data-aos="fade-up">
-      <div class="about-section">
-        <div class="section-heading">
-          <h2 class="section-heading-article" tabindex="0" aria-label="About me heading">
-            &#60;/AboutMe&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-        <div class="info-dp-section">
-          <div class="about-info">
-            <p tabindex="0" class="hahmlet" >
-              숫자 뒤에 숨은 이야기를 찾아내고  <br />
-              분석의 정교함도 중요하지만 즐겁게 소통하며 <br />
-              함께 결과물을 만들어가는 과정에 큰 가치를 두는 편입니다.
-            </p>
-            <br />
-            <p tabindex="0" class="hahmlet">
-              - Data로 가설을 설정하고 SQL과 Python으로 이를 검정하며 <br />
-              객관적인 근거를 도출하는 과정을 즐깁니다. <br />
-            </p>
-            <br />
-            <br />
-            <p tabindex="0" style="font-weight:900;">
-              Certification
-            </p>
-            <br />
-            <p tabindex="0" class="hahmlet">
-              사회조사분석사 - 2021.08.20<br />
-              한국사능력검정 1급 - 2024.08.22<br />
-              데이터분석준전문가(ADsP) - 2025.06.13 <br />
-              SQL 개발자(SQLD) - 2025.06.27 <br />
-            </p>
-            <!-- Resume button -->
-            <!-- <button class="resume-btn" id="resume-btn" onclick="openURL()"> -->
-              <div class="sign">
-
-                <!-- cloud 아이콘 경로라 직접 svg나 png 파일 다운 받아서 수정하기 -->
-                <svg viewBox="0 0 640 512">
-                  <path
-                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
-                </svg>
-
-              </div>
-
-              <div class="text">Resume</div>
-            </button>
-          </div>
-
-          <div class="dp" data-aos="fade-up">
-            <img src="src/img/다운로드.jpg" alt="빵빵덕" tabindex="0" aria-label="image of vinod" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- about section ends  -->
-
-    <!-- 프로젝트 -->
-    <section class="projects-section-container" id="projects">
-      <div class="projects-section-div">
-        <div class="section-heading" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="My projects starts from here">
-            &#60;/Projects&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-        <div class="project-boxes-div">
-          <!-- 1번째 프로젝트 -->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/webp/llm.png" class="faviconforProject" />
-                <article class="ProjectHeading">LLM-LangChain-Practice</article>
-                <p class="ProjectDescription">
-                  LangChain + OpenAI API + Streamlit을 활용해 진행한 실습 프로젝트 모음
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/rombird/LLM-Langchain-Practice" target="_blank" class="github-redirect">
-                    <svg viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg" >
-                      <path d="M9.24766 0C9.75193 0 10.2562 0 10.7605 0C10.8459 0.0244002 10.9272 0.0569337 11.0126 0.0650671C15.1362 0.51647 18.4303 3.24522 19.5933 7.21838C19.7885 7.87719 19.8699 8.56852 20.0041 9.2436C20.0041 9.74786 20.0041 10.2521 20.0041 10.7564C19.9797 10.8703 19.9471 10.9801 19.9309 11.0939C19.3941 15.0346 17.2834 17.7877 13.6194 19.2924C12.7206 19.6625 11.7161 19.7723 10.7564 20C10.2521 20 9.74786 20 9.2436 20C9.14599 19.9756 9.04839 19.939 8.94673 19.9309C4.9939 19.5323 1.61854 16.7751 0.45547 12.9524C0.244002 12.2407 0.150468 11.4925 0 10.7564C0 10.2521 0 9.74786 0 9.2436C0.0244002 9.12973 0.0569337 9.01993 0.0732005 8.90606C0.658804 4.74583 2.93615 1.94388 6.88085 0.524603C7.63318 0.252135 8.45466 0.170801 9.24766 0ZM11.5494 13.7129C12.0171 14.27 12.0862 14.8882 12.074 15.5388C12.0618 16.1 12.0659 16.6653 12.0659 17.2265C12.0659 17.9667 12.257 18.0968 12.9484 17.8365C16.649 16.4335 18.8125 12.68 18.2269 8.66612C17.5803 4.20496 13.1802 0.980073 8.74339 1.71614C2.47662 2.75722 -0.439203 9.939 3.34282 15.0346C4.33916 16.3766 5.6405 17.3241 7.21838 17.8894C7.53152 18.0033 7.86092 18.0236 7.91379 17.621C7.97479 17.133 7.93005 16.6328 7.93005 16.1488C7.65352 16.1651 7.44612 16.1814 7.23871 16.1895C6.19357 16.2424 5.46564 15.8316 5.03863 14.8272C4.86783 14.4286 4.50183 14.1074 4.19683 13.7698C4.09516 13.656 3.92029 13.6112 3.77796 13.538C3.82676 13.4526 3.87963 13.3632 3.92843 13.2778C4.19683 13.3184 4.51403 13.2778 4.71736 13.412C5.05083 13.6316 5.35584 13.9325 5.59577 14.2578C6.12037 14.9614 6.85238 15.2257 7.66165 14.9288C7.78365 14.8841 7.92599 14.7824 7.97885 14.6726C8.12932 14.3595 8.23912 14.026 8.36926 13.6926C8.21879 13.6682 8.04392 13.6356 7.86905 13.6072C5.02237 13.1314 3.68442 9.90647 5.3477 7.54778C5.44124 7.41358 5.4453 7.20618 5.45344 7.03131C5.48597 6.49044 5.48597 5.94551 5.52664 5.4087C5.54697 5.14437 5.7259 5.00203 5.99431 5.10777C6.54331 5.31924 7.07605 5.56324 7.62505 5.7747C7.81619 5.84791 8.04392 5.91297 8.23505 5.87637C9.4144 5.63237 10.5815 5.63237 11.7609 5.87637C11.952 5.91704 12.1797 5.85604 12.3709 5.78284C12.9199 5.57544 13.4526 5.32737 14.0016 5.11183C14.266 5.01017 14.453 5.13623 14.4734 5.40464C14.5181 5.94551 14.5262 6.48638 14.5506 7.02725C14.5588 7.17771 14.5222 7.37292 14.5994 7.47458C15.2094 8.24319 15.3477 9.12566 15.2989 10.0691C15.2054 11.8544 14.3148 13.0256 12.6556 13.4852C12.3139 13.5746 11.9642 13.6275 11.5494 13.7129Z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <!-- <div class="image-div">
-                <img src="" />
-              </div> -->
-            </div>
-          </div>
-
-          <!-- 2번째 프로젝트 -->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/webp/jobayologo.png" alt="atomic asher website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">JOP-A-YO <br /> 데이터 기반 맞춤형 상권 분석</article>
-                <p class="ProjectDescription">
-                  서울시 공공데이터를 활용한 예비 창업자 맞춤형 정보 제공
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/rombird/JOB-A-YO" target="_blank" class="github-redirect"
-                    aria-label="JOB-A-YO on GitHub">
-                    <svg viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg" alt="github redirect button" >
-                      <path d="M9.24766 0C9.75193 0 10.2562 0 10.7605 0C10.8459 0.0244002 10.9272 0.0569337 11.0126 0.0650671C15.1362 0.51647 18.4303 3.24522 19.5933 7.21838C19.7885 7.87719 19.8699 8.56852 20.0041 9.2436C20.0041 9.74786 20.0041 10.2521 20.0041 10.7564C19.9797 10.8703 19.9471 10.9801 19.9309 11.0939C19.3941 15.0346 17.2834 17.7877 13.6194 19.2924C12.7206 19.6625 11.7161 19.7723 10.7564 20C10.2521 20 9.74786 20 9.2436 20C9.14599 19.9756 9.04839 19.939 8.94673 19.9309C4.9939 19.5323 1.61854 16.7751 0.45547 12.9524C0.244002 12.2407 0.150468 11.4925 0 10.7564C0 10.2521 0 9.74786 0 9.2436C0.0244002 9.12973 0.0569337 9.01993 0.0732005 8.90606C0.658804 4.74583 2.93615 1.94388 6.88085 0.524603C7.63318 0.252135 8.45466 0.170801 9.24766 0ZM11.5494 13.7129C12.0171 14.27 12.0862 14.8882 12.074 15.5388C12.0618 16.1 12.0659 16.6653 12.0659 17.2265C12.0659 17.9667 12.257 18.0968 12.9484 17.8365C16.649 16.4335 18.8125 12.68 18.2269 8.66612C17.5803 4.20496 13.1802 0.980073 8.74339 1.71614C2.47662 2.75722 -0.439203 9.939 3.34282 15.0346C4.33916 16.3766 5.6405 17.3241 7.21838 17.8894C7.53152 18.0033 7.86092 18.0236 7.91379 17.621C7.97479 17.133 7.93005 16.6328 7.93005 16.1488C7.65352 16.1651 7.44612 16.1814 7.23871 16.1895C6.19357 16.2424 5.46564 15.8316 5.03863 14.8272C4.86783 14.4286 4.50183 14.1074 4.19683 13.7698C4.09516 13.656 3.92029 13.6112 3.77796 13.538C3.82676 13.4526 3.87963 13.3632 3.92843 13.2778C4.19683 13.3184 4.51403 13.2778 4.71736 13.412C5.05083 13.6316 5.35584 13.9325 5.59577 14.2578C6.12037 14.9614 6.85238 15.2257 7.66165 14.9288C7.78365 14.8841 7.92599 14.7824 7.97885 14.6726C8.12932 14.3595 8.23912 14.026 8.36926 13.6926C8.21879 13.6682 8.04392 13.6356 7.86905 13.6072C5.02237 13.1314 3.68442 9.90647 5.3477 7.54778C5.44124 7.41358 5.4453 7.20618 5.45344 7.03131C5.48597 6.49044 5.48597 5.94551 5.52664 5.4087C5.54697 5.14437 5.7259 5.00203 5.99431 5.10777C6.54331 5.31924 7.07605 5.56324 7.62505 5.7747C7.81619 5.84791 8.04392 5.91297 8.23505 5.87637C9.4144 5.63237 10.5815 5.63237 11.7609 5.87637C11.952 5.91704 12.1797 5.85604 12.3709 5.78284C12.9199 5.57544 13.4526 5.32737 14.0016 5.11183C14.266 5.01017 14.453 5.13623 14.4734 5.40464C14.5181 5.94551 14.5262 6.48638 14.5506 7.02725C14.5588 7.17771 14.5222 7.37292 14.5994 7.47458C15.2094 8.24319 15.3477 9.12566 15.2989 10.0691C15.2054 11.8544 14.3148 13.0256 12.6556 13.4852C12.3139 13.5746 11.9642 13.6275 11.5494 13.7129Z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/jobayo_main.png" alt="hompage image" />
-              </div>
-            </div>
-          </div>
-          <!-- 3번째 프로젝트 -->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/png/munhwa_semteo.png" alt="pexelicon website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">국내 관광수지 적자 개선을 위한 데이터 분석</article>
-                <p class="ProjectDescription">
-                  국민여행조사데이터를 활용하여 국내 관광 수지 적자 문제점과 그에 대한 해결방안을 데이터 기반으로 분석
-                </p>
-                <div class="project-buttons">
-                  <a href="https://drive.google.com/drive/folders/1xVENA5c70DAi83Bmr8FEwqIdfh3CEYa8?usp=sharing" target="_blank" class="github-redirect"
-                    aria-label="Data Analysis on GitHub">
-                    <svg viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
-                      <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
-                      <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/>
-                      <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/>
-                      <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
-                      <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
-                      <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
-                    </svg>
-                  </a>
-                  <a href="src/pdf/국내여행관광수지를 높이는 데이터분석.pdf" target="_blank" class="cta">
-                    <span>PDF 보기</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/ppt_main.PNG" alt="main image" />
-              </div>
-            </div>
-          </div>
-          <!-- --------------------- -->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/png/coconuttalk_bg.png" alt="lunetra website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">Coconut Talk</article>
-                <p class="ProjectDescription">
-                  세번째 프로젝트 예정입니다.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/inno-inho/CoconutTalk" target="_blank" class="github-redirect"
-                    aria-label=" on GitHub">
-                    <svg viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg" alt="github redirect button" >
-                      <path d="M9.24766 0C9.75193 0 10.2562 0 10.7605 0C10.8459 0.0244002 10.9272 0.0569337 11.0126 0.0650671C15.1362 0.51647 18.4303 3.24522 19.5933 7.21838C19.7885 7.87719 19.8699 8.56852 20.0041 9.2436C20.0041 9.74786 20.0041 10.2521 20.0041 10.7564C19.9797 10.8703 19.9471 10.9801 19.9309 11.0939C19.3941 15.0346 17.2834 17.7877 13.6194 19.2924C12.7206 19.6625 11.7161 19.7723 10.7564 20C10.2521 20 9.74786 20 9.2436 20C9.14599 19.9756 9.04839 19.939 8.94673 19.9309C4.9939 19.5323 1.61854 16.7751 0.45547 12.9524C0.244002 12.2407 0.150468 11.4925 0 10.7564C0 10.2521 0 9.74786 0 9.2436C0.0244002 9.12973 0.0569337 9.01993 0.0732005 8.90606C0.658804 4.74583 2.93615 1.94388 6.88085 0.524603C7.63318 0.252135 8.45466 0.170801 9.24766 0ZM11.5494 13.7129C12.0171 14.27 12.0862 14.8882 12.074 15.5388C12.0618 16.1 12.0659 16.6653 12.0659 17.2265C12.0659 17.9667 12.257 18.0968 12.9484 17.8365C16.649 16.4335 18.8125 12.68 18.2269 8.66612C17.5803 4.20496 13.1802 0.980073 8.74339 1.71614C2.47662 2.75722 -0.439203 9.939 3.34282 15.0346C4.33916 16.3766 5.6405 17.3241 7.21838 17.8894C7.53152 18.0033 7.86092 18.0236 7.91379 17.621C7.97479 17.133 7.93005 16.6328 7.93005 16.1488C7.65352 16.1651 7.44612 16.1814 7.23871 16.1895C6.19357 16.2424 5.46564 15.8316 5.03863 14.8272C4.86783 14.4286 4.50183 14.1074 4.19683 13.7698C4.09516 13.656 3.92029 13.6112 3.77796 13.538C3.82676 13.4526 3.87963 13.3632 3.92843 13.2778C4.19683 13.3184 4.51403 13.2778 4.71736 13.412C5.05083 13.6316 5.35584 13.9325 5.59577 14.2578C6.12037 14.9614 6.85238 15.2257 7.66165 14.9288C7.78365 14.8841 7.92599 14.7824 7.97885 14.6726C8.12932 14.3595 8.23912 14.026 8.36926 13.6926C8.21879 13.6682 8.04392 13.6356 7.86905 13.6072C5.02237 13.1314 3.68442 9.90647 5.3477 7.54778C5.44124 7.41358 5.4453 7.20618 5.45344 7.03131C5.48597 6.49044 5.48597 5.94551 5.52664 5.4087C5.54697 5.14437 5.7259 5.00203 5.99431 5.10777C6.54331 5.31924 7.07605 5.56324 7.62505 5.7747C7.81619 5.84791 8.04392 5.91297 8.23505 5.87637C9.4144 5.63237 10.5815 5.63237 11.7609 5.87637C11.952 5.91704 12.1797 5.85604 12.3709 5.78284C12.9199 5.57544 13.4526 5.32737 14.0016 5.11183C14.266 5.01017 14.453 5.13623 14.4734 5.40464C14.5181 5.94551 14.5262 6.48638 14.5506 7.02725C14.5588 7.17771 14.5222 7.37292 14.5994 7.47458C15.2094 8.24319 15.3477 9.12566 15.2989 10.0691C15.2054 11.8544 14.3148 13.0256 12.6556 13.4852C12.3139 13.5746 11.9642 13.6275 11.5494 13.7129Z" />
-                    </svg>
-                  </a>
-                  <a href="https://lunetra-studio.netlify.app/" target="_blank" class="cta"
-                    aria-label="Visit lunetra Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="" alt="Lunetra website preview image" />
-              </div>
-            </div>
-          </div>
-          <!-- --------------------- -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Skill -->
-    <section class="skills-section-container" id="skills">
-      <div class="skills-section">
-        <div class="section-heading" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
-            &#60;/Skills&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-
-        <div class="frontend-dev-section">
-          <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
-            aria-label="As a frontend a developer these are the skills i have">
-            Tech Stack
-          </h3>
-          <ul class="tech-stack-wrapper">
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">HTML</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
-              <span class="tooltip">CSS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
-              <span class="tooltip">JS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/tailwind.png" alt="tailwind skill" class="tech-stack-logo" />
-              <span class="tooltip">TAILWIND</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/react.png" alt="react skill" class="tech-stack-logo" />
-              <span class="tooltip">REACTJS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/node.png" alt="nodejs skill" class="tech-stack-logo" />
-              <span class="tooltip">NODEJS</span>
-            </li>
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/springboot.png" alt="springboot skill" class="tech-stack-logo" />
-              <span class="tooltip">SPRINGBOOT</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/figmalogo.png" alt="figma skill" class="tech-stack-logo" />
-              <span class="tooltip">FIGMA</span>
-            </li>
-            <!-- <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/nextlogo.png" alt="nextjs skill" class="tech-stack-logo" />
-              <span class="tooltip">NEXTJS</span>
-            </li> -->
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/mysql.png" alt="mysql skill" class="tech-stack-logo" />
-              <span class="tooltip">MYSQL</span>
-            </li>
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/r.png" alt="r skill" class="tech-stack-logo" />
-              <span class="tooltip">R</span>
-            </li>
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/python.png" alt="python skill" class="tech-stack-logo" />
-              <span class="tooltip">PYTHON</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
-              <span class="tooltip">GITHUB</span>
-            </li>
-
-            <!-- <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/tableau.png" alt="tableau skill" class="tech-stack-logo" />
-              <span class="tooltip">TABLEAU</span>
-            </li> -->
-
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- main ends here -->
-
-  <footer id="footer">
-    <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
-      <article aria-label="Back to top">&#8592;BACK TO TOP</article>
-    </button>
-    <div class="footer-background">
-      <div class="footer-blob"></div>
-    </div>
-    <div class="footer-foreground">
-      <div class="footercontainer">
-        <div class="two-words">
-          <article tabindex="0">
-            "Learning, Living, and Leveling Up."
-          </article>
-        </div>
-        <div class="social-media-container">
-          <div class="getintouch-heading">
-            <article>GetinTouch();</article>
-          </div>
-          <div class="logos">
-            <a href="https://www.notion.so/240158f4b2dc80c5ac9cecf0dd7ca1b1" target="_blank">
-              <svg class="SocialHandle" viewBox="0 0 448 512">
-                <path
-                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
-              </svg>
-            </a>
-
-            <a href="https://github.com/rombird" target="_blank"
-              <svg viewBox="0 0 496 512" class="SocialHandle">
-                <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-              </svg>
-            </a>
-
-            <!-- <a href="mailto:romsae5510@gmail.com" target="_blank">
-              <svg id="GmailLogo" viewBox="0 0 512 512">
-                <path
-                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-              </svg>
-            </a> -->
-          </div>
-        </div>
-        <div class="footer-avatar-container">
-          
-        </div>
-        <div class="footer-bottom">
-          <article>
-            rombird
-            &#169; romsae5510@gmail.com
-          </article>
-        </div>
+  <!-- 1. 표지 -->
+  <section class="stage" id="home">
+    <div class="slide cover">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="duck"><img src="images/logo.png" alt="홈화면로고"></div>
+      <h1 class="title">I trust data enough 
+        to question it.</h1>
+      <p class="tag">데이터를 통해 문제를 발견하고, 더 나은 답을 찾아갑니다.</p>
+      <div class="me">
+        <b>SAEROM's Portfolio</b>
+        <span>010 - 0000 - 0000</span>
+        <span>romsae5510@gmail.com</span>
       </div>
     </div>
-  </footer>
-  <!-- footer ends here -->
+  </section>
 
-  <script src="main.js"></script>
+  <!-- 목차 -->
+  <!-- <section class="stage screen-only" id="contents">
+  <div class="slide">
+    <h2>Contents</h2>
+    <ul class="toc">
+      <li><a href="#about">About Me <small>소개 · 자격증</small></a></li>
+      <li><a href="#projects">Projects <small>대표 프로젝트</small></a></li>
+      <li><a href="#skills">Skills <small>기술 스택</small></a></li>
+    </ul>
+  </div>
+</section> -->
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <!-- 2. About Me -->
+  <section class="stage" id="about">
+    <div class="slide glow flip">
+      <h2>About Me</h2>
+      <div class="about">
+        <div class="intro">
+          <div class="name">
+          임 새 롬
+          <small>Lim Saerom</small>
+          </div>
+          <p class="quote">“끊임없이 배우며 새로운 환경에 유연하게 적응하고,
+          사람들과 함께 고민하며 성장하는 예비 데이터 분석가입니다”</p>
+        </div>
+        <img class="photo" src="images/profile.jpg" alt="프로필 사진">
+        <div class="info">
+          <h3>학력</h3>
+          <p>덕성여자대학교 졸업 / 정보통계학과 (2020.02)</p>
+          <h3>자격증</h3>
+          <p>사회조사분석사 (2021.08)<br>한국사능력검정 1급 (2024.08)<br>데이터분석준전문가 ADsP (2025.06)<br>SQL 개발자 SQLD (2025.06)</p>
+        </div>
+       
+      </div>
+    </div>
+  </section>
 
-  <script>
-    function openURL() {
-      var url = "src/pdf/Vinod's Resume.pdf";
+  <!-- 3. Projects : 카드는 아래 script의 projects 데이터로 자동 생성 -->
+  <section class="stage" id="projects">
+    <div class="slide glow diag">
+      <h2>Projects</h2>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+  <div id="details"></div>
 
-      window.open(url, "_blank");
-    }
-  </script>
- <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+  <!-- 4. Skills -->
+  <!-- <section class="stage" id="skills">
+  <div class="slide">
+    <h2>Skills</h2>
+    <div class="chips">
+      <span>HTML</span><span>CSS</span><span>JS</span><span>Tailwind</span><span>React</span><span>Node.js</span>
+      <span>Spring Boot</span><span>Figma</span><span>MySQL</span><span>R</span><span>Python</span><span>GitHub</span>
+    </div>
+  </div>
+</section> -->
 
+  <script src="projects/llm-langchain.js"></script>
+  <script src="projects/job-a-yo.js"></script>
+  <script src="projects/tourism.js"></script>
+  <script src="projects/coconut-talk.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
