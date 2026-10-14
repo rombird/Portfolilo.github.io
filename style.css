@@ -30,10 +30,7 @@
   margin: 0
 }
 
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth
-}
+html { scroll-behavior: smooth; }   /* 메뉴 클릭 시 부드럽게 이동 */
 
 body {
   background: var(--paper);
@@ -41,24 +38,34 @@ body {
   color: var(--ink)
 }
 
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+
 /* 슬라이드 한 장 = 화면 한 칸. 16:9 비율 유지, 글자 크기는 슬라이드 너비(cqw) 기준 */
 .stage {
-  min-height: 100vh;
-  display: grid;
-  scroll-snap-align: start
+  height: auto;
+  min-height: 0;
+  overflow-x: clip;     /* glow가 옆으로 삐져나와 생기는 가로 스크롤 방지 */
 }
 
 .slide {
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  overflow: visible;    /* 슬라이드 자체 스크롤 금지 */
   container-type: inline-size;
   position: relative;
-  overflow: hidden;
   width: 100%;
-  min-height: 100vh;
-  background: var(--paper);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 9cqw 8cqw 6cqw
+  justify-content: flex-start;
+  background: transparent;
+  padding: 8cqw 8cqw 4cqw;
 }
 
 /* 그라데이션 효과 - 파란 번짐 */
@@ -257,7 +264,8 @@ h2 {
   min-height: 10cqw;
   text-align: left;
   font: inherit;
-  color: inherit
+  color: inherit;
+  width: 100%
 }
 
 .card:hover,
@@ -288,11 +296,61 @@ h2 {
   display: block
 }
 
-/* <br>` 없이 쓴 그대로 */
-.pg-body p,
-.d-body p {
+/* 프로젝트내 이미지 관련 CSS */
+.figs { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2cqw 1.6cqw;
+  align-content: start;
+}
+.figs figure { margin:0; }
+.figs img {
+  width: 100%;
+  height: 28vh;            /* 화면 높이에 맞춰 두 줄이 들어오도록 */
+  object-fit: contain;
+  background: #fff;
+  border-radius: 6px;
+  display: block;
+  cursor: zoom-in;
+}
+.figs figcaption {
+  font-size: .8cqw;
+  color: #666;
+  line-height: 1.5;
+  margin-top: .5cqw;
+}
+
+.pg {
+  position: absolute;
+  right: 3cqw;
+  bottom: 2cqw;
+  font-size: .9cqw;
+  color: var(--sub)
+}
+
+.d-body p,
+.pg-body p {
+  font-size: .95cqw;   /* 기존 .d-body p 값 그대로 */
+  color: var(--sub);   /* 기존 값 그대로 */
+  line-height: 1.7;    /* 기존 값 그대로 */
   white-space: pre-line;
 }
+
+.pg-body p b {
+  display: inline-block;
+  margin-bottom: .3cqw;
+  font-size: 1.05cqw;
+  color: #222;
+}
+
+/* 글 1 : 그림 2.6 비율, 그림 쪽을 훨씬 넓게 */
+.pg-body.two {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 3cqw;
+  align-items: start;
+}
+.pg-body.two p { max-width: 100%; }
 
 /* LOGO CSS */
 .p-head {
@@ -309,6 +367,12 @@ h2 {
   flex: none;
 }
 
+/* 확대창 */
+.zoom { position:fixed; inset:0; background:rgba(0,0,0,.75); display:flex; align-items:center; justify-content:center; z-index:9999; cursor:zoom-out; }
+.zoom img { max-width:92vw; max-height:90vh; background:#fff; border-radius:8px; }
+
+@media (max-width:900px) { .figs { grid-template-columns:1fr 1fr; } }
+@media (max-width:480px) { .figs { grid-template-columns:1fr; } }
 
 /* 상단 목차 메뉴 (인쇄 시 숨김) */
 nav {
@@ -360,9 +424,6 @@ nav a.on {
   color: inherit
 }
 
-.card {
-  width: 100%
-}
 
 .go {
   display: block;
@@ -374,7 +435,6 @@ nav a.on {
 }
 
 /* 프로젝트 상세: 화면에선 팝업, PDF에선 프로젝트별 한 페이지 */
-
 .stage.detail {
   display: none;
   position: fixed;
@@ -383,8 +443,12 @@ nav a.on {
   background: rgba(30, 30, 30, .55);
   overflow: auto;
   place-items: start center;
-  scroll-snap-align: none
+  scroll-snap-align: none;
+  overflow-x: hidden;            /* 가로 스크롤바 제거 */
+  scrollbar-width: none;         /* Firefox */
 }
+
+.stage.detail::-webkit-scrollbar { display: none; }  /* Chrome, Edge */
 
 .stage.detail.show {
   display: grid
@@ -406,27 +470,8 @@ nav a.on {
   overflow: hidden;
   justify-content: flex-start;
   padding: 5cqw 6cqw;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, .25)
-}
-
-.x {
-  position: fixed;
-  top: 2vh;
-  right: 3vw;
-  font-size: 2rem;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  color: #fff;
-  z-index: 21
-}
-
-.pg {
-  position: absolute;
-  right: 3cqw;
-  bottom: 2cqw;
-  font-size: .9cqw;
-  color: var(--sub)
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+  background: var(--paper);  
 }
 
 .d-title.sm {
@@ -435,26 +480,18 @@ nav a.on {
   margin-bottom: 2cqw
 }
 
-.pg-body {
-  display: grid;
-  gap: 3cqw;
-  font-size: 1cqw;
-  line-height: 1.8;
-  color: var(--sub)
-}
+.side { display:flex; flex-direction:column; gap:1.6cqw; min-width:0; }
 
-.pg-body.two {
-  grid-template-columns: 1fr 1fr
-}
+/* 이미지 2개일 때는 낮춰서 표 자리를 남김 */
+.figs.ba { grid-template-columns:1fr 1fr; }
+.figs.ba img { height:30vh; }
 
+.cmp { width:100%; border-collapse:collapse; font-size:.8cqw; line-height:1.5; background:#fff; }
+.cmp th, .cmp td { border:1px solid #d6d6d6; padding:.6cqw .8cqw; text-align:left; vertical-align:top; }
+.cmp thead th { background:#f1f1f1; }
+.cmp tbody th { background:#fafafa; width:12%; white-space:nowrap; }
+.cmp td:nth-child(3) { background:#f2f7ff; }  /* After 열 강조 */
 
-
-
-/* .stage.detail{display:none;position:fixed;inset:0;z-index:20;
-  background:rgba(30,30,30,.55);place-items:center;scroll-snap-align:none}
-.stage.detail.show{display:grid}
-.detail .slide{width:min(92vw,1200px);min-height:0;max-height:92vh;overflow:auto;
-  box-shadow:0 20px 60px rgba(0,0,0,.25)} */
 
 .x {
   position: absolute;
@@ -464,7 +501,8 @@ nav a.on {
   background: none;
   border: 0;
   cursor: pointer;
-  color: var(--ink)
+  color: var(--ink);
+  z-index: 21;
 }
 
 .d-head {
@@ -552,12 +590,6 @@ nav a.on {
   padding-bottom: .4cqw
 }
 
-.d-body p {
-  font-size: 1cqw;
-  color: var(--sub);
-  line-height: 1.7
-}
-
 .links{ display:flex; align-items:center; gap:1.2cqw; }
 .links a img{ width:2.2cqw; height:2.2cqw; display:block; transition:opacity .2s; }
 .links a:hover img{ opacity:.6; }
@@ -589,52 +621,59 @@ nav a.on {
 }
 
 @media print {
-  html {
-    scroll-snap-type: none
-  }
-
-  body {
-    background: none;
+  /* 배경색·그라데이션도 PDF에 그대로 인쇄 */
+  * {
     -webkit-print-color-adjust: exact;
-    print-color-adjust: exact
+    print-color-adjust: exact;
   }
 
-  nav {
-    display: none
+  /* 화면과 같은 회색 배경 */
+  html, body {
+    background: var(--paper);
   }
 
-  .stage {
-    height: 720px;
-    width: 1280px;
-    page-break-after: always;
-    break-after: page
-  }
-
-  .slide {
-    width: 1280px;
-    height: 720px;
-    min-height: 0;
-    overflow: hidden
-  }
-
-  .detail .slide {
-    width: 1280px;
-    height: 720px;
-    max-height: none;
-    overflow: hidden;
-    box-shadow: none
-  }
-
+  /* 인쇄에서 숨길 것 */
+  nav,
   .screen-only,
   .go,
   .x {
-    display: none
+    display: none;
   }
 
+  /* 메인: 섹션 1개 = PDF 1페이지 */
+  .stage {
+    width: 1280px;
+    height: 720px;
+    break-after: page;
+  }
+
+  .slide {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  /* 상세: 팝업이 아니라 일반 흐름으로 */
   .stage.detail {
     display: grid;
     position: static;
-    background: none
+    background: none;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    break-after: auto;
+  }
+
+  .pages {
+    display: block;
+    padding: 0;
+  }
+
+  /* 상세 슬라이드 1장 = PDF 1페이지 */
+  .detail .slide {
+    width: 1280px;
+    height: 720px;
+    box-shadow: none;
+    break-after: page;
   }
 }
 
